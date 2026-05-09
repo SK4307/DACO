@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Environment and secrets
+.env
+*.env
+!.env.example
+
+# dbt
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+
+# Airflow
+airflow/logs/
+
+# Local data files
+landing/incoming/**/*.csv
+landing/archive/**/*.csv
+landing/rejected/**/*.csv
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
