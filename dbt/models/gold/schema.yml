@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: Customer dimension.
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+
+  - name: fct_orders
+    description: Order fact table.
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+      - name: customer_id
+        tests:
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_id
