@@ -1,0 +1,20 @@
+landing_root: landing/incoming
+archive_root: landing/archive
+rejected_root: landing/rejected
+
+sources:
+  - name: customers
+    bronze_schema: bronze
+    bronze_table: raw_customers
+    file_pattern: "*.csv"
+    delimiter: ","
+    encoding: utf-8
+    has_header: true
+
+  - name: orders
+    bronze_schema: bronze
+    bronze_table: raw_orders
+    file_pattern: "*.csv"
+    delimiter: ","
+    encoding: utf-8
+    has_header: true
