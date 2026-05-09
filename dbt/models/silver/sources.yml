@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: "{{ env_var('SQLSERVER_DATABASE') }}"
+    schema: bronze
+    tables:
+      - name: raw_customers
+      - name: raw_orders
